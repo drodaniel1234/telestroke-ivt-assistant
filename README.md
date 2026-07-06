@@ -18,6 +18,7 @@ subtle wording (e.g. anticoagulation status) rather than a single clear
 data point.
 
 ## What it does
+<img width="800" height="587" alt="telestroke-ivt-assistant" src="https://github.com/user-attachments/assets/42895d95-6681-4c73-b3b0-2cc94042fbeb" />
 
 The tool reads a telestroke note and, for each IV-tPA eligibility criterion,
 returns:
