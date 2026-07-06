@@ -1,0 +1,196 @@
+{
+  "description": "IV thrombolytic (IVT) eligibility criteria for telestroke LLM extraction demo. Each criterion is a target for the LLM to extract from a note. The LLM should NOT compute eligibility itself -- it only fills in 'value' and 'evidence' per criterion. A separate deterministic rules engine (mirroring MDCalc logic) computes the final eligible/ineligible result from these values.",
+  "value_options": ["yes", "no", "unknown"],
+  "inclusion_criteria": [
+    {
+      "id": "age_18plus",
+      "label": "Age >= 18",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "clinical_ais_diagnosis",
+      "label": "Clinical diagnosis of ischemic stroke causing neurological deficit",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "onset_under_4_5h",
+      "label": "Time of symptom onset (or last known well) < 4.5 hours",
+      "value": "unknown",
+      "evidence": null
+    }
+  ],
+  "absolute_contraindications": [
+    {
+      "id": "ct_extensive_hypodensity",
+      "label": "CT with extensive hypodensity",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "ct_acute_ich",
+      "label": "CT with acute intracranial hemorrhage",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "tbi_14d",
+      "label": "Moderate to severe traumatic brain injury within 14 days",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "neurosurgery_14d",
+      "label": "Neurosurgery within 14 days",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "spinal_cord_injury_3mo",
+      "label": "Acute spinal cord injury within 3 months",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "intra_axial_neoplasm",
+      "label": "Intra-axial neoplasm",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "infective_endocarditis",
+      "label": "Infective endocarditis",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "severe_coagulopathy",
+      "label": "Severe coagulopathy (INR >1.7, aPTT >40s, or PT >15s)",
+      "value": "unknown",
+      "evidence": null,
+      "notes": "IVT may be initiated before labs return if no clinical suspicion for coagulopathy"
+    },
+    {
+      "id": "severe_thrombocytopenia",
+      "label": "Severe thrombocytopenia (platelets <100,000/mm3)",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "aortic_arch_dissection",
+      "label": "Aortic arch dissection",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "aria",
+      "label": "Amyloid-related imaging abnormalities (ARIA)",
+      "value": "unknown",
+      "evidence": null,
+      "notes": "Associated with amyloid immunotherapy"
+    }
+  ],
+  "relative_contraindications": [
+    {
+      "id": "pre_existing_disability_frailty",
+      "label": "Pre-existing disability and/or frailty",
+      "value": "unknown",
+      "evidence": null,
+      "notes": "Treatment determined on individual basis"
+    },
+    {
+      "id": "doac_48h",
+      "label": "DOAC exposure within 48 hours",
+      "value": "unknown",
+      "evidence": null,
+      "notes": "Key extraction target -- anticoagulation status, not AFib history itself, is what gates IVT"
+    },
+    {
+      "id": "prior_ischemic_stroke_3mo",
+      "label": "Ischemic stroke within 3 months",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "prior_ich",
+      "label": "Prior intracranial hemorrhage (ICH)",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "major_non_cns_trauma",
+      "label": "Major non-CNS trauma in last 14 days to 3 months",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "major_non_cns_surgery_10d",
+      "label": "Major non-CNS surgery within 10 days",
+      "value": "unknown",
+      "evidence": null,
+      "notes": "Consultation with surgical experts appropriate"
+    },
+    {
+      "id": "gi_gu_bleed_21d",
+      "label": "GI/GU bleeding within last 21 days",
+      "value": "unknown",
+      "evidence": null,
+      "notes": "Consultation with surgical experts appropriate"
+    },
+    {
+      "id": "intracranial_arterial_dissection",
+      "label": "Intracranial arterial dissection",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "intracranial_vascular_malformation",
+      "label": "Intracranial vascular malformations",
+      "value": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "stemi_3mo",
+      "label": "STEMI within last 3 months",
+      "value": "unknown",
+      "evidence": null,
+      "notes": "Individual risk/benefit discussion and emergent cardiology consultation"
+    },
+    {
+      "id": "stemi_recent_days",
+      "label": "STEMI within past several days",
+      "value": "unknown",
+      "evidence": null,
+      "notes": "Risk of hemopericardium; emergent cardiology consultation"
+    },
+    {
+      "id": "stemi_concurrent_ais",
+      "label": "STEMI concurrent with AIS",
+      "value": "unknown",
+      "evidence": null,
+      "notes": "Consider dose appropriate for cerebral ischemia + emergent cardiology consultation"
+    },
+    {
+      "id": "acute_pericarditis",
+      "label": "Acute pericarditis",
+      "value": "unknown",
+      "evidence": null,
+      "notes": "Specialty consultation recommended"
+    }
+  ],
+  "unconfirmed_items_pending_verification": [
+    "Dural procedure within 7 days",
+    "Arterial puncture within 7 days (non-compressible site)",
+    "Left atrial or ventricular thrombus",
+    "Systemic active malignancy",
+    "Pregnancy and postpartum period"
+  ],
+  "field_definitions": {
+    "id": "short unique key used in code",
+    "label": "human-readable criterion text shown in UI",
+    "value": "yes | no | unknown -- filled in by the LLM after reading the note",
+    "evidence": "exact quote/snippet + location from the note supporting the value, or null if unknown",
+    "notes": "optional clinical context shown to the clinician"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Telestroke IVT Eligibility Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="eyebrow">Telestroke Demo Prototype</div>
+    <h1>IVT Eligibility Assistant</h1>
+    <p class="sub">Reads a telestroke note and extracts IV thrombolytic eligibility criteria with linked evidence. The model never decides eligibility itself &mdash; it only reports what the note supports, and flags what it can't determine. A separate rules engine computes the eligibility banner below from those answers.</p>
+  </header>
+
+  <div class="controls" id="noteButtons"></div>
+
+  <div class="grid">
+    <div class="panel">
+      <div class="panel-head">Telestroke Note</div>
+      <div class="note-body" id="noteBody"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">Eligibility Checklist</div>
+      <div class="checklist-body" id="checklistBody"></div>
+    </div>
+  </div>
+
+  <div class="result-banner idle" id="resultBanner">Select a note and run extraction to see the eligibility read-out.</div>
+  <div class="disclaimer">Synthetic demo notes only. This prototype is a documentation-speed aid, not a clinical decision-support device &mdash; final eligibility determination remains the treating physician's.</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
