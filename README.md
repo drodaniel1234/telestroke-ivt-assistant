@@ -139,7 +139,7 @@ behaviors:
 - **Clear absolute contraindication** -- confirms the tool correctly flags a
   hard stop (recent neurosurgery) rather than only handling ambiguity well
 
-## Future direction
+## Future direction & The Stroke Copilot Ecosystem
 
 This prototype currently reads a single, isolated telestroke note per case. That
 is a deliberate simplification for the current demo, not the intended end
@@ -160,18 +160,11 @@ state. The planned next stages:
    INR?") -- with the same evidence-linking and "I don't know, here's why"
    behavior the checklist already uses, rather than a black-box answer.
 
-This direction is shared with the companion
-[Telestroke Quality Metric Extraction & Linked Evidence Dashboard](#) project --
-both tools are, at their core, the same underlying capability (turning
-unstructured clinical documentation into structured, evidence-linked output)
-applied to different downstream tasks. A shared synthetic patient/chart library
-feeding both tools (and future modules) is the intended long-term direction,
-positioning this work as components of one broader clinical AI platform rather
-than two unrelated prototypes.
+Beyond these module-specific upgrades, this tool is designed to serve as the critical decision-support node within the broader **Stroke Copilot Ecosystem**—a zero-duplicate-entry clinical pipeline aimed at minimizing cognitive load during acute codes:
+* **Step 1: Bedside Capture:** Nurses rapidly compute scores via the *NIHSS Mobile Assistant*.
+* **Step 2: Real-Time Logging:** Physicians track acute metrics on the fly via the *Stroke Time Tracker*.
+* **Step 3: Clinical Decision Support (This Tool):** This module processes those inputs alongside the patient's chart to evaluate IVT eligibility against strict safety constraints.
+* **Step 4: Automated Extraction:** The *Telestroke Quality Metric Dashboard* sweeps the finalized documentation to abstract structured data for hospital reporting.
 
 ## Disclaimer
-
-Synthetic demo notes only. This prototype is a documentation-speed and
-eligibility-screening aid, not a substitute for clinical judgment -- final
-eligibility determination always remains the responsibility of the treating
-physician.
+This repository contains experimental prototype code intended solely for research, demonstration, and educational purposes. It is not an FDA-cleared medical device, nor is it a substitute for independent clinical judgment. All final clinical determinations remain the strict responsibility of the treating physician. Do not use this software for direct patient care.
